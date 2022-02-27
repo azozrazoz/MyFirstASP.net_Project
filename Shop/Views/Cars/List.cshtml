@@ -1,0 +1,18 @@
+﻿
+
+<h1 style="margin-top: 100px">Cars:</h1>
+<h3>@Model.CurrentCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var car in Model.AllCars)
+        {
+            <div>
+                <h2>Model: @car.name</h2>
+                <img src="@car.img" height="300" alt="@car.name" />
+                <p>Price: @car.price.ToString() $</p>
+                <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+            </div>
+        }
+    }
+</div>
+ 
